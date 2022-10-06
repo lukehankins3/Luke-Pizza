@@ -5,6 +5,7 @@ class MyGUI:
     def __init__(self):
         self.main_window = tkinter.Tk()
 
+
         self.main_window.geometry('500x200')
         self.main_window.title('Exercise')
 
@@ -37,17 +38,19 @@ class MyGUI:
         self.bottomframe.pack()
 
 
-        self.avg_button = tkinter.Button(self.bottomframe,text="Average",command=self.average)
+        self.avgbutton = tkinter.Button(self.find_average,text="Average",command=self.find_average)
         self.quitbutton = tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
-
-        self.avg_button.pack(side='left')
+        
+        self.avgbutton.pack(side='left')
         self.quitbutton.pack(side='right')
+    def find_average(self):
+        average = ((sum(self.score_entry1.get()+self.score_entry2.get()+self.score_entry3.get()))/3)
+    
 
 
         tkinter.mainloop()
 
-    def do_something(self):
-        tkinter.messagebox.showinfo("response","Thanks for clicking me!")
+    
 
 myGUI = MyGUI()
 
