@@ -17,8 +17,6 @@ class MyGUI:
         self.rb2 = tkinter.Radiobutton(self.topframe,text='Option2',variable=self.radio_var,value=2)
         self.rb3 = tkinter.Radiobutton(self.topframe,text='Option3',variable=self.radio_var,value=3)
 
-        self.rb2.select()
-
         self.rb1.pack()
         self.rb2.pack()
         self.rb3.pack()
